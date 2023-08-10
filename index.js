@@ -2,6 +2,7 @@
 import dotenv from "dotenv";
 import express from "express";      // Requisição do pacote do express
 import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./bd.js";
+
 dotenv.config();
 
 const app = express();              // Instancia o Express
