@@ -24,5 +24,4 @@ async function connect() {
     return res.rows;
   }
 
-  export { selectUsuarios };
   export { selectUsuarios, selectUsuario };
