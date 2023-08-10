@@ -36,5 +36,11 @@ async function connect() {
     await client.query(query, [id]);
   }
 
-
-export { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario };
+async function updateUsuario(data) {
+  const client = await connect();
+  const query =
+    "UPDATE usuario SET nome = $1, email = $2, senha = $3 WHERE id = $4";
+  const usuario = [data.nome, data.email, data.senha, data.id];
+  await client.query(query, usuario);
+}
+export { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario };
