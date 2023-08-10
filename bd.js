@@ -14,4 +14,15 @@ async function connect() {
     return res.rows;
   }
 
+  async function selectUsuario(id) {
+    const client = await connect();
+    // é mais seguro usar assim, o bd tá mais protegido 
+    const query = "SELECT * FROM usuario WHERE id = $1";
+    // aqui vai buscar no vetor 
+    const usuario = [id];
+    const res = await client.query(query, usuario);
+    return res.rows;
+  }
+
   export { selectUsuarios };
+  export { selectUsuarios, selectUsuario };
