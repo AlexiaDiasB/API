@@ -13,7 +13,7 @@ app.use(roteadorUsuario);
 
 app.get("/", (req, res) => {        // Cria a rota da raiz do projeto
   res.json({
-    message: "API para CRUD usuario: link_gitgub",  
+    message: "API para CRUD usuario:https://github.com/AlexiaDiasB",  
   });
 });
 
