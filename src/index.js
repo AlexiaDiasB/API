@@ -1,9 +1,9 @@
 //index.js
-import roteadorLogin from "./routes/login.js";
 import dotenv from "dotenv";
 import express from "express";      // Requisição do pacote do express
 dotenv.config();
 import roteadorUsuario from "./routes/usuario.js";
+import roteadorLogin from "./routes/login.js";
 
 const app = express();              // Instancia o Express
 const port = 3000;                  // Define a porta
